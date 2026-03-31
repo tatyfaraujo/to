@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cursos oferecidos por Tatyanny F. Araujo - Terapeuta Ocupacional">
+  <title>Cursos - Tatyanny F. Araujo</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos específicos para página de cursos */
+    .course-hero {
+      background: linear-gradient(135deg, rgba(212, 165, 116, 0.2) 0%, rgba(201, 169, 97, 0.15) 100%);
+      padding: 4rem 0;
+    }
+
+    .course-hero h1 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .course-hero .subtitle {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .course-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .course-container {
+        padding: 0 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .course-container {
+        padding: 0 2rem;
+      }
+    }
+
+    .course-image-container {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .course-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .course-intro {
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .course-intro p {
+      font-size: 1.125rem;
+      color: rgba(71, 52, 46, 0.8);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .coupon-highlight {
+      background: linear-gradient(135deg, rgba(139, 90, 43, 0.1) 0%, rgba(201, 169, 97, 0.1) 100%);
+      border: 2px solid var(--primary);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    .coupon-highlight h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .coupon-code {
+      background-color: var(--primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      display: inline-block;
+      margin: 1rem 0;
+      letter-spacing: 2px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .coupon-highlight p {
+      color: rgba(71, 52, 46, 0.8);
+      margin: 0.5rem 0;
+    }
+
+    .coupon-highlight .coupon-subtext {
+      font-size: 0.875rem;
+      color: var(--secondary);
+      margin-top: 1rem;
+    }
+
+    .course-section {
+      margin-bottom: 3rem;
+    }
+
+    .course-section h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1rem;
+    }
+
+    .learning-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .learning-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .learning-item {
+      background-color: var(--card-bg);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .learning-item:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .learning-item p {
+      margin: 0;
+      color: rgba(71, 52, 46, 0.8);
+    }
+
+    .benefits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .benefit-check {
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-top: -0.25rem;
+    }
+
+    .benefit-text {
+      color: rgba(71, 52, 46, 0.8);
+      line-height: 1.6;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .audience-card {
+      background-color: rgba(212, 165, 116, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+
+    .audience-card p {
+      margin: 0;
+      color: rgba(71, 52, 46, 0.8);
+    }
+
+    .course-closing {
+      background: linear-gradient(135deg, rgba(212, 165, 116, 0.15) 0%, rgba(201, 169, 97, 0.1) 100%);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .course-closing h3 {
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .course-closing p {
+      font-size: 1.125rem;
+      color: rgba(71, 52, 46, 0.8);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .course-signature {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    .course-cta {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .course-cta .btn {
+      font-size: 1.125rem;
+      padding: 1rem 2.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    .back-link::before {
+      content: "← ";
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <div class="container">
+      <div class="logo">Tatyanny</div>
+      <ul>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#livros">Livros</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="course-hero">
+    <div class="course-container">
+      <a href="index.html" class="back-link">Voltar</a>
+      <h1>Mãe na Foto</h1>
+      <p class="subtitle">Um curso criado para mães que desejam parar de apenas registrar… e começar a fazer parte das memórias.</p>
+    </div>
+  </section>
+
+  <!-- Imagem do Curso -->
+  <section>
+    <div class="course-container">
+      <div class="course-image-container">
+        <img src="images/mae-na-foto.jpeg" alt="Mãe na Foto - Curso de Fotografia para Mães" class="course-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introdução -->
+  <section>
+    <div class="course-container">
+      <div class="course-intro">
+        <p>Você não precisa de câmera profissional.</p>
+        <p>Não precisa entender de fotografia.</p>
+        <p>E nem esperar o "momento perfeito".</p>
+        <p style="margin-top: 1.5rem; margin-bottom: 0;">Com o celular que você já tem nas mãos, é possível criar fotos leves, naturais e cheias de emoção com seus filhos. No mãe na foto, você vai aprender de forma simples e acolhedora como fotografar sua rotina com beleza, intenção e verdade.</p>
+      </div>
+
+      <!-- Cupom de Desconto -->
+      <div class="coupon-highlight">
+        <h3>🎉 Aproveite o Desconto!</h3>
+        <p>Use o cupom:</p>
+        <div class="coupon-code">DIADASMAES</div>
+        <p class="coupon-subtext">Válido para inscrições no curso "Mãe na Foto"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- O que você vai aprender -->
+  <section class="bg-light">
+    <div class="course-container">
+      <div class="course-section">
+        <h2>✨ O que você vai aprender</h2>
+        <div class="learning-list">
+          <div class="learning-item">
+            <p>Como fazer fotos bonitas usando apenas o celular</p>
+          </div>
+          <div class="learning-item">
+            <p>Luz natural e iluminação dentro de casa</p>
+          </div>
+          <div class="learning-item">
+            <p>Enquadramento e ângulos</p>
+          </div>
+          <div class="learning-item">
+            <p>Poses espontâneas</p>
+          </div>
+          <div class="learning-item">
+            <p>Como fotografar sozinha</p>
+          </div>
+          <div class="learning-item">
+            <p>Edição leve e natural</p>
+          </div>
+          <div class="learning-item">
+            <p>Como criar identidade nas suas fotos</p>
+          </div>
+          <div class="learning-item">
+            <p>Beleza no cotidiano</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Você também recebe -->
+  <section>
+    <div class="course-container">
+      <div class="course-section">
+        <h2>🤎 Você também recebe</h2>
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-check">✔</div>
+            <div class="benefit-text">Presets exclusivos</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check">✔</div>
+            <div class="benefit-text">Guias rápidos em PDF</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check">✔</div>
+            <div class="benefit-text">Aulas práticas</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check">✔</div>
+            <div class="benefit-text">Passo a passo simples</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check">✔</div>
+            <div class="benefit-text">Material pensado para mães reais e rotina real</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Para quem é esse curso -->
+  <section class="bg-light">
+    <div class="course-container">
+      <div class="course-section">
+        <h2>🌿 Para quem é esse curso?</h2>
+        <p style="font-size: 1.125rem; color: rgba(71, 52, 46, 0.8); margin-bottom: 2rem;">Para mães que:</p>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <p>Quase nunca aparecem nas fotos</p>
+          </div>
+          <div class="audience-card">
+            <p>Querem registrar a infância dos filhos com mais beleza</p>
+          </div>
+          <div class="audience-card">
+            <p>Sentem que "não levam jeito" para fotografia</p>
+          </div>
+          <div class="audience-card">
+            <p>Desejam criar memórias afetivas sem complicação</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Section -->
+  <section>
+    <div class="course-container">
+      <div class="course-closing">
+        <h3>✨ Não é sobre perfeição.</h3>
+        <p>É sobre presença.</p>
+        <p>Sobre memória.</p>
+        <p>Sobre existir nas fotos que seus filhos vão guardar para sempre.</p>
+        <div class="course-signature">📸 mãe na foto<br>por Tatyanny Araújo</div>
+      </div>
+
+      <div class="course-cta">
+        <p style="font-size: 1.125rem; color: rgba(71, 52, 46, 0.8); margin-bottom: 1.5rem;">Pronta para começar sua jornada?</p>
+        <a href="https://pay.kiwify.com.br/rRm1MYu" class="btn btn-primary" target="_blank">Inscrever-se no Curso</a>
+        <p style="font-size: 0.875rem; color: var(--secondary); margin-top: 1rem;">💡 Não esqueça de usar o cupom <strong>DIADASMAES</strong> na inscrição!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Tatyanny F. Araujo</strong></p>
+      <p>Terapeuta Ocupacional | CREFITO 4: 16564-TO</p>
+      <p>📧 <a href="mailto:tatyfaraujo@hotmail.com" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">tatyfaraujo@hotmail.com</a></p>
+      <p class="quote">"Cada pessoa é única. Meu trabalho é criar espaços seguros, acolhedores e terapêuticos."</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

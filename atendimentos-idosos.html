@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atendimentos para Idosos - Tatyanny F. Araujo">
+  <title>Atendimentos para Idosos - Tatyanny F. Araujo</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+      font-size: 0.875rem;
+    }
+    .breadcrumb a {
+      color: var(--primary);
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    @media (min-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-item {
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .content-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background-color: rgba(212, 165, 116, 0.1);
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--primary);
+    }
+    .content-section h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content-section li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .content-section li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <div class="container">
+      <div class="logo">Tatyanny</div>
+      <ul>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#livros">Livros</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="index.html#servicos">Serviços</a> / Atendimentos para Idosos
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Atendimentos para Idosos</h1>
+      <p class="subtitle">Envelhecimento ativo, autonomia e qualidade de vida</p>
+      <p>Acompanhamento terapêutico especializado focado em envelhecimento ativo, manutenção de autonomia, estimulação cognitiva e bem-estar emocional. Trabalhamos atividades que promovem qualidade de vida e significado.</p>
+    </div>
+  </section>
+
+  <!-- Galeria de Imagens -->
+  <section>
+    <div class="container">
+      <h2>Nosso Trabalho em Ação</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/Atendimentos-Idosos.jpeg" alt="Grupo de idosos em atividade terapêutica - Oficina criativa e social">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre os Atendimentos -->
+  <section class="bg-light">
+    <div class="container">
+      <h2>Sobre os Atendimentos</h2>
+      
+      <div class="content-section">
+        <h3>Filosofia do Envelhecimento Ativo</h3>
+        <p>Acreditamos que envelhecer é um processo natural e que pode ser vivido com qualidade, autonomia e significado. Nossos atendimentos buscam:</p>
+        <ul>
+          <li>Manter a independência e autonomia</li>
+          <li>Estimular a participação social</li>
+          <li>Promover bem-estar físico e emocional</li>
+          <li>Valorizar experiências e sabedoria acumulada</li>
+          <li>Facilitar conexões significativas</li>
+          <li>Estimular criatividade e expressão pessoal</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Áreas de Atuação</h3>
+        <ul>
+          <li>Estimulação cognitiva e memória</li>
+          <li>Manutenção de habilidades motoras</li>
+          <li>Atividades de vida diária (AVD)</li>
+          <li>Integração social e participação comunitária</li>
+          <li>Bem-estar emocional e psicológico</li>
+          <li>Prevenção de isolamento social</li>
+          <li>Adaptação a mudanças de saúde</li>
+          <li>Suporte em processos de luto e perda</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Atividades Terapêuticas</h3>
+        <p>Utilizamos diversas atividades para estimular e engajar:</p>
+        <ul>
+          <li><strong>Oficinas Criativas:</strong> Pintura, artesanato, modelagem</li>
+          <li><strong>Atividades Cognitivas:</strong> Jogos, quebra-cabeças, leitura</li>
+          <li><strong>Movimento e Exercício:</strong> Atividades físicas adaptadas</li>
+          <li><strong>Grupos de Convivência:</strong> Encontros sociais e trocas</li>
+          <li><strong>Reminiscência:</strong> Resgate de memórias e histórias de vida</li>
+          <li><strong>Expressão Artística:</strong> Música, dança, teatro</li>
+          <li><strong>Atividades Ao Ar Livre:</strong> Passeios e contato com natureza</li>
+          <li><strong>Culinária Terapêutica:</strong> Preparação de alimentos como atividade</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Benefícios dos Atendimentos</h3>
+        <ul>
+          <li>Manutenção e melhora da função cognitiva</li>
+          <li>Preservação da independência e autonomia</li>
+          <li>Redução do isolamento social</li>
+          <li>Melhora na qualidade de vida geral</li>
+          <li>Aumento da autoestima e confiança</li>
+          <li>Melhor regulação emocional</li>
+          <li>Prevenção de depressão e ansiedade</li>
+          <li>Fortalecimento de vínculos sociais</li>
+          <li>Maior engajamento em atividades significativas</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Modalidades de Atendimento</h3>
+        <ul>
+          <li><strong>Atendimento Individual:</strong> Sessões personalizadas focadas nas necessidades específicas</li>
+          <li><strong>Atendimento em Grupo:</strong> Atividades em grupo para estimular interação social</li>
+          <li><strong>Orientação Familiar:</strong> Suporte e orientação aos cuidadores e familiares</li>
+          <li><strong>Visitas Domiciliares:</strong> Atendimento em casa para idosos com mobilidade reduzida</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Frequência e Duração</h3>
+        <p>Os atendimentos são personalizados conforme as necessidades e possibilidades de cada idoso:</p>
+        <ul>
+          <li>Sessões de 50 minutos a 1 hora</li>
+          <li>Frequência de 1 a 2 vezes por semana</li>
+          <li>Avaliação periódica do progresso</li>
+          <li>Flexibilidade conforme condições de saúde</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Experiência Profissional</h3>
+        <p>Tenho experiência consolidada em atendimentos a idosos, com formação específica em Gerontologia pela PUC. Trabalho com sensibilidade, respeito e compreensão das particularidades do envelhecimento, valorizando a história de vida e a dignidade de cada pessoa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <h2 class="text-center">Agende uma Consulta</h2>
+      <p class="text-center" style="max-width: 42rem; margin: 0 auto 2rem;">Gostaria de conhecer mais sobre nossos atendimentos para idosos? Entre em contato para agendar uma consulta e conversar sobre como podemos contribuir para a qualidade de vida.</p>
+      <div style="text-align: center;">
+        <a href="index.html#contato" class="btn btn-primary" style="display: inline-block;">📞 Entre em Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Tatyanny F. Araujo - Terapeuta Ocupacional</p>
+      <p class="quote">"Cada criança é uma história. Cada idoso é uma sabedoria. Meu trabalho é honrar ambas."</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

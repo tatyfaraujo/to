@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design Afetivo - Tatyanny F. Araujo">
+  <title>Design Afetivo - Tatyanny F. Araujo</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+      font-size: 0.875rem;
+    }
+    .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .before-after-container {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .before-after-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+      align-items: center;
+    }
+
+    .before-after-image {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .before-after-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .before-after-label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .before-after-text h3 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .before-after-text ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .before-after-text li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .before-after-text li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .content-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background-color: rgba(212, 165, 116, 0.1);
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--primary);
+    }
+
+    .content-section h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content-section li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .content-section li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .cta-box {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      border-radius: 12px;
+      color: white;
+    }
+
+    .cta-box h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .cta-box a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .before-after-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <div class="container">
+      <div class="logo">Tatyanny</div>
+      <ul>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#livros">Livros</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a> / <a href="index.html#servicos">Serviços</a> / Design Afetivo
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Design Afetivo</h1>
+      <p class="subtitle">Transformando espaços em ambientes acolhedores</p>
+      <p>O Design Afetivo vai além da estética. É a arte de criar espaços que promovem bem-estar emocional, segurança e qualidade de vida. Trabalho tanto em ambientes residenciais quanto comerciais, transformando cada espaço em um lugar onde as pessoas se sintam verdadeiramente em casa.</p>
+    </div>
+  </section>
+
+  <!-- Projetos Antes e Depois -->
+  <section>
+    <div class="container">
+      <h2>Transformações Realizadas</h2>
+      
+      <!-- Projeto 1 -->
+      <div class="before-after-item">
+        <div>
+          <div class="before-after-image">
+            <img src="images/DesignAfetivo.jpeg" alt="Quarto infantil antes e depois da transformação">
+            <span class="before-after-label">ANTES / DEPOIS</span>
+          </div>
+        </div>
+        <div class="before-after-text">
+          <h3>Quarto Infantil Acolhedor</h3>
+          <p>Transformação completa de um quarto infantil, criando um espaço que equilibra funcionalidade com acolhimento emocional.</p>
+          <h4 style="color: var(--accent); margin-top: 1.5rem;">Intervenções Realizadas:</h4>
+          <ul>
+            <li>Organização inteligente do espaço</li>
+            <li>Paleta de cores suave e acolhedora</li>
+            <li>Iluminação adequada para diferentes atividades</li>
+            <li>Áreas de brincadeira e descanso bem definidas</li>
+            <li>Acessibilidade e segurança otimizadas</li>
+            <li>Elementos decorativos que estimulam criatividade</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projeto 2 -->
+      <div class="before-after-item">
+        <div class="before-after-text">
+          <h3>Quarto Infantil Multifuncional</h3>
+          <p>Redesign de um quarto compartilhado, criando um ambiente que respeita a individualidade de cada criança enquanto promove harmonia.</p>
+          <h4 style="color: var(--accent); margin-top: 1.5rem;">Intervenções Realizadas:</h4>
+          <ul>
+            <li>Divisão inteligente do espaço</li>
+            <li>Mobiliário multifuncional e versátil</li>
+            <li>Cores neutras com toques personalizados</li>
+            <li>Áreas de estudo e repouso separadas</li>
+            <li>Organização que facilita autonomia</li>
+            <li>Ambiente que cresce com as crianças</li>
+          </ul>
+        </div>
+        <div>
+          <div class="before-after-image">
+            <img src="images/DesignAfetivo2.jpeg" alt="Quarto compartilhado antes e depois">
+            <span class="before-after-label">ANTES / DEPOIS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo Detalhado -->
+  <section class="bg-light">
+    <div class="container">
+      <h2>Sobre o Design Afetivo</h2>
+      
+      <div class="content-section">
+        <h3>🎯 O que é Design Afetivo?</h3>
+        <p>Design Afetivo é uma abordagem que integra princípios de terapia ocupacional, psicologia ambiental e design de interiores. Não se trata apenas de tornar um espaço bonito, mas de criar ambientes que:</p>
+        <ul>
+          <li>Promovem bem-estar emocional e segurança</li>
+          <li>Estimulam autonomia e independência</li>
+          <li>Facilitam interações positivas</li>
+          <li>Respeitam necessidades individuais</li>
+          <li>Adaptam-se ao crescimento e mudanças</li>
+          <li>Refletem valores e identidade pessoal</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>🏠 Ambientes Atendidos</h3>
+        <ul>
+          <li><strong>Residenciais:</strong> Quartos infantis, salas de estar, cozinhas, espaços de convivência</li>
+          <li><strong>Comerciais:</strong> Consultórios, clínicas, espaços de terapia, salas de aula</li>
+          <li><strong>Comunitários:</strong> Escolas, centros de convivência, instituições</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>🎨 Minha Abordagem</h3>
+        <p>Cada projeto começa com uma escuta atenta. Compreendo as necessidades, rotinas, valores e sonhos das pessoas que habitarão o espaço. A partir daí, trabalho:</p>
+        <ul>
+          <li><strong>Análise do espaço:</strong> Avaliação completa das características físicas</li>
+          <li><strong>Planejamento estratégico:</strong> Definição de zonas funcionais</li>
+          <li><strong>Seleção de cores:</strong> Paletas que promovem bem-estar emocional</li>
+          <li><strong>Iluminação adequada:</strong> Diferentes tipos de luz para diferentes atividades</li>
+          <li><strong>Mobiliário funcional:</strong> Peças que combinam beleza e utilidade</li>
+          <li><strong>Organização inteligente:</strong> Sistemas que facilitam autonomia</li>
+          <li><strong>Elementos decorativos:</strong> Detalhes que refletem identidade pessoal</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>💡 Benefícios do Design Afetivo</h3>
+        <ul>
+          <li>Melhora no bem-estar emocional e mental</li>
+          <li>Aumento da sensação de segurança e conforto</li>
+          <li>Estímulo à autonomia e independência</li>
+          <li>Melhor organização e funcionalidade</li>
+          <li>Espaços que crescem com as pessoas</li>
+          <li>Redução de ansiedade e estresse</li>
+          <li>Ambientes que refletem identidade pessoal</li>
+          <li>Investimento em qualidade de vida</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>📋 Processo de Trabalho</h3>
+        <ul>
+          <li><strong>Consultoria Inicial:</strong> Conversa sobre necessidades, rotinas e objetivos</li>
+          <li><strong>Análise do Espaço:</strong> Avaliação completa do ambiente</li>
+          <li><strong>Proposta de Design:</strong> Apresentação de ideias e conceitos</li>
+          <li><strong>Implementação:</strong> Execução do projeto com atenção aos detalhes</li>
+          <li><strong>Acompanhamento:</strong> Suporte pós-projeto para ajustes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h3>Transforme seu espaço</h3>
+        <p>Vamos criar um ambiente que reflita quem você é e promova bem-estar para toda a família.</p>
+        <a href="index.html#contato">Solicite uma Consultoria</a>
+      </div>
+
+      <div style="text-align: center; margin: 2rem 0;">
+        <a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">← Voltar para página principal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>"Um espaço bem pensado é um espaço que cuida. Design Afetivo é criar ambientes que abraçam quem você é."</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2026 Tatyanny F. Araujo - Terapeuta Ocupacional. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

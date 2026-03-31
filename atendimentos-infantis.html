@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atendimentos Terapêuticos Infantis - Tatyanny F. Araujo">
+  <title>Atendimentos Terapêuticos Infantis - Tatyanny F. Araujo</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+      font-size: 0.875rem;
+    }
+    .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+    }
+
+    .carousel-slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      animation: fadeIn 0.5s;
+    }
+
+    .carousel-slide.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      background: var(--primary);
+      color: white;
+      gap: 1rem;
+    }
+
+    .carousel-btn {
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel-counter {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: #f9f9f9;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--primary);
+      width: 30px;
+      border-radius: 5px;
+    }
+
+    .content-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background-color: rgba(212, 165, 116, 0.1);
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--primary);
+    }
+
+    .content-section h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content-section li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .content-section li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .cta-box {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      border-radius: 12px;
+      color: white;
+    }
+
+    .cta-box h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .cta-box a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .carousel {
+        height: 350px;
+      }
+
+      .carousel-controls {
+        flex-wrap: wrap;
+      }
+
+      .carousel-btn {
+        flex: 1;
+        min-width: 80px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .carousel-counter {
+        width: 100%;
+        text-align: center;
+        order: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <div class="container">
+      <div class="logo">Tatyanny</div>
+      <ul>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#livros">Livros</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a> / <a href="index.html#servicos">Serviços</a> / Atendimentos Terapêuticos Infantis
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Atendimentos Terapêuticos Infantis</h1>
+      <p class="subtitle">Desenvolvimento, inclusão e bem-estar para crianças</p>
+      <p>Acompanhamento especializado e personalizado para crianças com necessidades específicas de desenvolvimento. Utilizamos atividades lúdicas, jogos terapêuticos e técnicas de estimulação sensório-motora adaptadas à idade e ao diagnóstico, integrando princípios da metodologia Montessori e do modelo educacional alemão.</p>
+    </div>
+  </section>
+
+  <!-- Carrossel de Imagens -->
+  <section>
+    <div class="container">
+      <h2>Nosso Trabalho em Ação</h2>
+      
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-slide active">
+            <img src="images/Atendimentos-Infantis.jpeg" alt="Criança com blocos coloridos">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis2.jpeg" alt="Atividade ao ar livre com pintura">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis3.jpeg" alt="Crianças em atividade de brincar">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis4.jpeg" alt="Criança com blocos magnéticos">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis5.jpeg" alt="Criança com material Montessori">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis6.jpeg" alt="Criança com atividade de motricidade fina">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis7.jpeg" alt="Criança em atividade de motricidade grossa">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis8.jpeg" alt="Criança com material sensorial">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis9.jpeg" alt="Criança em atividade de equilíbrio">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Atendimentos-Infantis10.jpeg" alt="Criança com material de desenvolvimento">
+          </div>
+        </div>
+        
+        <div class="carousel-controls">
+          <button class="carousel-btn" onclick="changeSlide(-1)">← Anterior</button>
+          <span class="carousel-counter"><span id="current-slide">1</span> / 10</span>
+          <button class="carousel-btn" onclick="changeSlide(1)">Próximo →</button>
+        </div>
+
+        <div class="carousel-dots" id="dots-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo Detalhado -->
+  <section class="bg-light">
+    <div class="container">
+      <h2>Sobre os Atendimentos</h2>
+      
+      <div class="content-section">
+        <h3>🎯 Abordagem Terapêutica</h3>
+        <p>Nossa abordagem combina técnicas de terapia ocupacional com princípios da metodologia Montessori e do modelo educacional alemão. Cada sessão é cuidadosamente planejada para respeitar o ritmo individual da criança, promovendo autonomia, confiança e desenvolvimento integral.</p>
+        <ul>
+          <li><strong>Ambiente preparado:</strong> Espaços seguros e organizados que estimulam a exploração</li>
+          <li><strong>Atividades lúdicas:</strong> Brincadeiras terapêuticas que promovem desenvolvimento</li>
+          <li><strong>Respeito ao ritmo:</strong> Cada criança progride no seu tempo</li>
+          <li><strong>Participação familiar:</strong> Orientação aos pais para continuidade em casa</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>👥 Especialidades Atendidas</h3>
+        <ul>
+          <li><strong>Transtorno do Espectro Autista (TEA):</strong> Desenvolvimento de habilidades sociais, comunicação e autorregulação</li>
+          <li><strong>TDAH:</strong> Estratégias de foco, organização e controle emocional</li>
+          <li><strong>Transtorno Opositivo Desafiador (TOD):</strong> Trabalho com regulação emocional e comportamental</li>
+          <li><strong>Atraso no desenvolvimento:</strong> Estimulação de marcos motores e cognitivos</li>
+          <li><strong>Dificuldades de aprendizagem:</strong> Suporte ao desenvolvimento de habilidades acadêmicas</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>🧩 Técnicas e Materiais Utilizados</h3>
+        <ul>
+          <li><strong>Materiais Montessori:</strong> Blocos, contas, quebra-cabeças que desenvolvem concentração e motricidade fina</li>
+          <li><strong>Atividades sensoriais:</strong> Exploração de texturas, sons, cores e aromas</li>
+          <li><strong>Brincadeira ao ar livre:</strong> Movimento livre e exploração da natureza</li>
+          <li><strong>Jogos cooperativos:</strong> Desenvolvimento de habilidades sociais</li>
+          <li><strong>Artes e expressão criativa:</strong> Pintura, desenho, modelagem</li>
+          <li><strong>Atividades de vida prática:</strong> Tarefas do dia a dia que promovem independência</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>💡 Benefícios dos Atendimentos</h3>
+        <ul>
+          <li>Desenvolvimento de autonomia e confiança</li>
+          <li>Melhora na coordenação motora (fina e grossa)</li>
+          <li>Estimulação cognitiva e desenvolvimento do pensamento</li>
+          <li>Desenvolvimento de habilidades sociais e emocionais</li>
+          <li>Redução de ansiedade e aumento da autoestima</li>
+          <li>Melhora na comunicação e expressão</li>
+          <li>Integração sensorial adequada</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>⏰ Frequência e Duração</h3>
+        <p>A frequência e duração dos atendimentos são individualizadas conforme a necessidade de cada criança. Geralmente recomenda-se:</p>
+        <ul>
+          <li><strong>Frequência:</strong> 1 a 3 vezes por semana</li>
+          <li><strong>Duração da sessão:</strong> 50 a 60 minutos</li>
+          <li><strong>Avaliação periódica:</strong> A cada 3 meses para ajuste de objetivos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h3>Pronto para começar?</h3>
+        <p>Entre em contato para agendar uma consulta inicial gratuita.</p>
+        <a href="index.html#contato">Agende Agora</a>
+      </div>
+
+      <div style="text-align: center; margin: 2rem 0;">
+        <a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">← Voltar para página principal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>"Cada criança é um ser único com potencial infinito. Meu trabalho é criar o espaço seguro onde esse potencial pode florescer."</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">© 2026 Tatyanny F. Araujo - Terapeuta Ocupacional. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 10;
+
+    function initCarousel() {
+      const container = document.getElementById('dots-container');
+      for (let i = 1; i <= totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot' + (i === 1 ? ' active' : '');
+        dot.onclick = () => goToSlide(i);
+        container.appendChild(dot);
+      }
+    }
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.dot');
+      
+      if (n > totalSlides) currentSlide = 1;
+      if (n < 1) currentSlide = totalSlides;
+      
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[currentSlide - 1].classList.add('active');
+      dots[currentSlide - 1].classList.add('active');
+      
+      document.getElementById('current-slide').textContent = currentSlide;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      showSlide(currentSlide);
+    }
+
+    // Inicializar carrossel
+    initCarousel();
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
